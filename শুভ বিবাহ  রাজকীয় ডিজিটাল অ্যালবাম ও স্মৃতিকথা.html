@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শুভ বিবাহ | রাজকীয় ডিজিটাল অ্যালবাম ও স্মৃতিকথা</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --maroon-deep: #4a0e17;
+            --maroon-rich: #6b1110;
+            --maroon-soft: #801818;
+            --gold-light: #fbe3ad;
+            --gold-primary: #d4af37;
+            --gold-dark: #aa7c11;
+            --bg-creme: #fdfbf7;
+            --bg-card: #ffffff;
+            --text-dark: #2c1810;
+            --text-muted: #66554b;
+            --border-gold: rgba(212, 175, 55, 0.4);
+            --shadow-royal: 0 12px 35px rgba(74, 14, 23, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Hind Siliguri', 'Segoe UI', serif;
+            background-color: var(--bg-creme);
+            color: var(--text-dark);
+            background-image: radial-gradient(var(--border-gold) 0.75px, transparent 0.75px), radial-gradient(var(--border-gold) 0.75px, var(--bg-creme) 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* HEADER SECTION */
+        header {
+            background: linear-gradient(135deg, var(--maroon-deep) 0%, var(--maroon-rich) 50%, var(--maroon-soft) 100%);
+            color: var(--gold-light);
+            text-align: center;
+            padding: 3.5rem 1.5rem 2.5rem;
+            position: relative;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            border-bottom: 5px solid var(--gold-primary);
+        }
+
+        header::before, header::after {
+            content: "❖";
+            font-size: 1.8rem;
+            color: var(--gold-primary);
+            position: absolute;
+            top: 15px;
+        }
+        header::before { left: 25px; }
+        header::after { right: 25px; }
+
+        .wedding-symbol {
+            font-size: 2.8rem;
+            color: var(--gold-primary);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', 'Hind Siliguri', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--gold-light);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            margin-bottom: 0.5rem;
+        }
+
+        header p.subtitle {
+            font-size: 1.25rem;
+            color: #f3e5ab;
+            font-weight: 400;
+            max-width: 650px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(212, 175, 55, 0.4);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+            padding: 6px 0;
+        }
+
+        /* NAVIGATION BAR */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--maroon-deep);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border-bottom: 1px solid var(--gold-dark);
+        }
+
+        nav button {
+            background: transparent;
+            border: none;
+            color: #e2d1c3;
+            padding: 1.1rem 2.5rem;
+            font-size: 1.1rem;
+            font-family: 'Hind Siliguri', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+        }
+
+        nav button:hover, nav button.active {
+            color: var(--gold-light);
+            background-color: rgba(212, 175, 55, 0.15);
+        }
+
+        nav button.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark));
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            max-width: 1180px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+            flex: 1;
+            width: 100%;
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* CARD STYLES */
+        .card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 2.2rem;
+            box-shadow: var(--shadow-royal);
+            margin-bottom: 2.5rem;
+            border: 1px solid var(--border-gold);
+            position: relative;
+        }
+
+        .card-header-title {
+            color: var(--maroon-rich);
+            font-family: 'Playfair Display', 'Hind Siliguri', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 2px solid var(--gold-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* BRIDE & GROOM ZIGZAG PROFILE SECTION */
+        .couple-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .profile-card {
+            display: flex;
+            background: #fffdf9;
+            border-radius: 12px;
+            border: 2px solid var(--border-gold);
+            box-shadow: 0 8px 25px rgba(74, 14, 23, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .profile-card:hover {
+            box-shadow: 0 12px 30px rgba(107, 17, 16, 0.18);
+            border-color: var(--gold-primary);
+        }
+
+        /* ZIGZAG LAYOUT DIRECTIVES */
+        .profile-card.left-img {
+            flex-direction: row;
+        }
+
+        .profile-card.right-img {
+            flex-direction: row-reverse;
+        }
+
+        .profile-img-container {
+            flex: 0 0 320px;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--maroon-deep);
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            min-height: 280px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .profile-card:hover .profile-img-container img {
+            transform: scale(1.05);
+        }
+
+        .profile-content {
+            flex: 1;
+            padding: 2rem 2.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .profile-tag {
+            display: inline-block;
+            align-self: flex-start;
+            background: linear-gradient(135deg, var(--maroon-rich), var(--maroon-deep));
+            color: var(--gold-light);
+            border: 1px solid var(--gold-primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        .profile-name {
+            font-family: 'Playfair Display', 'Hind Siliguri', serif;
+            color: var(--maroon-rich);
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+
+        .profile-bio {
+            color: #44332a;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* GALLERY THUMBNAIL GRID */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .thumb-card {
+            background: #fcf9f2;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #e8dfcf;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .thumb-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 10px 22px rgba(107, 17, 16, 0.2);
+            border-color: var(--gold-primary);
+        }
+
+        .thumb-media-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .thumb-card img, .thumb-card video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .thumb-card:hover img, .thumb-card:hover video {
+            transform: scale(1.08);
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px;
+            height: 44px;
+            background: rgba(74, 14, 23, 0.75);
+            border: 2px solid var(--gold-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            font-size: 1.2rem;
+            pointer-events: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+
+        .thumb-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(44, 24, 16, 0.88));
+            color: #ffffff;
+            padding: 1.2rem 0.6rem 0.5rem;
+            font-size: 0.85rem;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: 500;
+        }
+
+        /* MODAL (FULLSCREEN LIGHTBOX VIEW) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(20, 5, 8, 0.92);
+            backdrop-filter: blur(8px);
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+        }
+
+        .modal.active {
+            display: flex;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 85vh;
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--gold-primary);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .modal-media-container {
+            max-height: 70vh;
+            background-color: #0d0405;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .modal-media-container img {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+        }
+
+        .modal-media-container video, .modal-media-container iframe {
+            width: 80vw;
+            height: 65vh;
+            max-width: 950px;
+            border: none;
+        }
+
+        .modal-info {
+            padding: 1.2rem;
+            background: var(--maroon-deep);
+            color: var(--gold-light);
+            text-align: center;
+            border-top: 1px solid var(--gold-dark);
+        }
+
+        .modal-info h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: #ffffff;
+            font-size: 2.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1010;
+            transition: color 0.2s;
+            line-height: 1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .close-modal:hover {
+            color: var(--gold-primary);
+        }
+
+        /* FORUM & COMMENT FORM */
+        .forum-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1rem;
+        }
+
+        input[type="text"], input[type="password"], input[type="url"], textarea, select {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            margin-top: 0.4rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid #dcd1be;
+            border-radius: 6px;
+            background-color: #fffefb;
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--text-dark);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--gold-dark);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+        }
+
+        label {
+            font-weight: 600;
+            color: var(--maroon-rich);
+            font-size: 0.95rem;
+        }
+
+        .btn-royal {
+            background: linear-gradient(135deg, var(--maroon-rich), var(--maroon-deep));
+            color: var(--gold-light);
+            border: 1px solid var(--gold-primary);
+            padding: 0.85rem 2rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            font-family: 'Hind Siliguri', sans-serif;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(107, 17, 16, 0.25);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-royal:hover {
+            background: linear-gradient(135deg, var(--maroon-soft), var(--maroon-rich));
+            color: #ffffff;
+            box-shadow: 0 6px 15px rgba(107, 17, 16, 0.35);
+            transform: translateY(-1px);
+        }
+
+        /* COMMENTS LIST */
+        .comments-list {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .comment-card {
+            background-color: #fdfaf4;
+            border-left: 4px solid var(--gold-primary);
+            padding: 1.2rem;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .comment-author {
+            font-weight: 700;
+            color: var(--maroon-deep);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .comment-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .comment-body {
+            color: #44332a;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* ADMIN LOCK & PANEL */
+        .admin-lock-screen {
+            max-width: 450px;
+            margin: 3rem auto;
+            text-align: center;
+        }
+
+        .admin-lock-icon {
+            font-size: 3.5rem;
+            color: var(--maroon-rich);
+            margin-bottom: 1rem;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 1.5rem;
+            margin: 0.5rem 0 1.2rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .radio-option input[type="radio"] {
+            accent-color: var(--maroon-rich);
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .admin-box-title {
+            font-size: 1.2rem;
+            color: var(--maroon-rich);
+            margin-bottom: 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px dashed var(--border-gold);
+            font-weight: 700;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--maroon-deep);
+            color: #d3c2b5;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: auto;
+            border-top: 3px solid var(--gold-dark);
+            font-size: 0.95rem;
+        }
+
+        footer p.blessing {
+            color: var(--gold-light);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            header p.subtitle { font-size: 1rem; }
+            nav button { padding: 0.9rem 1.2rem; font-size: 0.95rem; }
+            .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.8rem; }
+            .forum-form-grid { grid-template-columns: 1fr; }
+            .card { padding: 1.4rem; }
+            .modal-media-container video, .modal-media-container iframe { width: 95vw; height: 50vh; }
+            .profile-card.left-img, .profile-card.right-img { flex-direction: column; }
+            .profile-img-container { flex: 0 0 220px; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER SECTION -->
+    <header>
+        <div class="wedding-symbol">👑 ✨ 💍 ✨ 👑</div>
+        <h1>শুভ বিবাহ ও প্রীতি সম্মেলন</h1>
+        <p class="subtitle">স্নেহের ছোট ভাইয়ের নতুন জীবনের যাত্রাপথে ভালোবাসার ডিজিটাল স্মৃতিকথা</p>
+    </header>
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <button id="btn-public" class="active" onclick="switchTab('public')">
+            <span>✨</span> রাজকীয় গ্যালারি ও শুভেচ্ছা ফোরাম
+        </button>
+        <button id="btn-admin" onclick="switchTab('admin')">
+            <span>🔒</span> এডমিন প্যানেল
+        </button>
+    </nav>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <div class="container">
+
+        <!-- PUBLIC VIEW: GALLERY & FORUM -->
+        <div id="public-tab" class="tab-content active">
+            
+            <!-- BRIDE & GROOM PROFILE ZIGZAG DISPLAY SECTION -->
+            <div class="couple-section">
+                <!-- Groom Profile (Left Image) -->
+                <div class="profile-card left-img">
+                    <div class="profile-img-container">
+                        <img id="display-groom-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="বর">
+                    </div>
+                    <div class="profile-content">
+                        <span class="profile-tag">🤵 নববিবাহিত বর (ছোট ভাই)</span>
+                        <h2 class="profile-name" id="display-groom-name">শ্রদ্ধেয় ছোট ভাই</h2>
+                        <p class="profile-bio" id="display-groom-bio">
+                            আমাদের স্নেহের ছোট ভাই। শিক্ষাজীবনে অসাধারণ কৃতিত্বের পাশাপাশি তার অমায়িক ব্যবহার ও দূরদর্শী চিন্তা আমাদের পরিবারের গর্ব। জীবনের নতুন এই দ্বিতীয় অধ্যায়ে তিনি পা রাখছেন অশেষ শুভকামনা ও আশীর্বাদ নিয়ে।
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bride Profile (Right Image - ZigZag Look) -->
+                <div class="profile-card right-img">
+                    <div class="profile-img-container">
+                        <img id="display-bride-img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="কনে">
+                    </div>
+                    <div class="profile-content">
+                        <span class="profile-tag">👰 নববিবাহিত কনে (বধু)</span>
+                        <h2 class="profile-name" id="display-bride-name">স্নেহের কনে</h2>
+                        <p class="profile-bio" id="display-bride-bio">
+                            আমাদের পরিবারের নতুন সদস্য ও স্নেহের লক্ষ্মী কনে। তার গুণাবলী, মাধুর্য ও মার্জিত ব্যক্তিত্ব আমাদের পরিবারকে আরও আলোকময় করে তুলেছে। নবদম্পতির সুন্দর ও সুখে-ভরা আগামীর জন্য পরম করুণাময়ের কাছে প্রার্থনারত।
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ALBUM SECTION -->
+            <div class="card">
+                <div class="card-header-title">
+                    <span>🖼️</span> শুভ বিবাহের রাজকীয় স্মৃতিকথা (অ্যালবাম)
+                </div>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">ছবি বা ভিডিওটি বড় আকারে ও স্পষ্টভাবে দেখতে সেটির উপর ক্লিক করুন।</p>
+
+                <div id="gallery-container" class="gallery-grid">
+                    <!-- Media Thumbnails loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- GUESTBOOK / FORUM SECTION -->
+            <div class="card">
+                <div class="card-header-title">
+                    <span>💌</span> নবদম্পতির জন্য শুভকামনা ও আশীর্বাদ নিবন্ধ
+                </div>
+
+                <form id="comment-form" onsubmit="addComment(event)">
+                    <div class="forum-form-grid">
+                        <div>
+                            <label for="guest-name">আপনার শুভ নাম *</label>
+                            <input type="text" id="guest-name" placeholder="যেমন: ড. সুব্রত রায়" required>
+                        </div>
+                        <div>
+                            <label for="guest-relation">আপনার পরিচয় / সম্পর্ক (ঐচ্ছিক)</label>
+                            <input type="text" id="guest-relation" placeholder="যেমন: বরপক্ষের আত্মীয় / বন্ধু">
+                        </div>
+                    </div>
+
+                    <label for="guest-message">আশীর্বানী ও শুভকামনা বার্তা *</label>
+                    <textarea id="guest-message" rows="4" placeholder="নবদম্পতির সুখী ও সমৃদ্ধময় জীবনের জন্য আপনার অমূল্য শুভেচ্ছা বার্তাটি লিখুন..." required></textarea>
+
+                    <button type="submit" class="btn-royal">
+                        <span>🌹</span> আশীর্বাদ ও বার্তা প্রদান করুন
+                    </button>
+                </form>
+
+                <div style="margin-top: 2.5rem; border-top: 1px dashed var(--border-gold); padding-top: 1.5rem;">
+                    <h3 style="color: var(--maroon-rich); margin-bottom: 1rem; font-size: 1.3rem;">
+                        🌺 প্রীতি শুভেচ্ছা সমূহের তালিকা
+                    </h3>
+                    <div id="comments-container" class="comments-list">
+                        <!-- Comments will be rendered here -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ADMIN PANEL VIEW -->
+        <div id="admin-tab" class="tab-content">
+            
+            <!-- PASSWORD AUTH LOCK -->
+            <div id="admin-auth" class="card admin-lock-screen">
+                <div class="admin-lock-icon">🔐</div>
+                <h2 style="color: var(--maroon-rich); margin-bottom: 0.5rem;">এডমিন নিরাপত্তা যাচাই</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                    অ্যালবামে নতুন কন্টেন্ট বা বর-কনের বিবরণ আপডেট করতে নির্ধারিত পাসওয়ার্ডটি লিখুন।
+                </p>
+                <form onsubmit="verifyPassword(event)">
+                    <input type="password" id="admin-pass-input" placeholder="পাসওয়ার্ড প্রদান করুন (ডিফল্ট: 1234)" required style="text-align: center; font-size: 1.1rem; letter-spacing: 2px;">
+                    <button type="submit" class="btn-royal" style="width: 100%; margin-top: 0.5rem;">
+                        প্যানেলে প্রবেশ করুন
+                    </button>
+                </form>
+                <p id="pass-error" style="color: #b30000; margin-top: 1rem; display: none; font-weight: 600;">❌ ভুল পাসওয়ার্ড! আবার চেষ্টা করুন।</p>
+            </div>
+
+            <!-- ADMIN CONTROL DASHBOARD (HIDDEN UNTIL AUTH) -->
+            <div id="admin-dashboard" class="card" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 2px solid var(--gold-primary); padding-bottom: 0.8rem;">
+                    <div class="card-header-title" style="margin-bottom: 0; border: none; padding: 0;">
+                        <span>⚙️</span> এডমিন কন্টেন্ট ও প্রোফাইল ব্যবস্থাপনা প্যানেল
+                    </div>
+                    <button onclick="logoutAdmin()" style="background: #e74c3c; color: white; border: none; padding: 0.4rem 1rem; border-radius: 4px; cursor: pointer; font-weight: 600;">
+                        লগ আউট 🚪
+                    </button>
+                </div>
+
+                <!-- SECTION 1: UPDATE BRIDE & GROOM PROFILE DETAILS -->
+                <div style="margin-bottom: 2.5rem; background: #fffcf7; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-gold);">
+                    <div class="admin-box-title">👑 বর ও কনের বিবরণ এবং ছবি আপলোড করুন (ঝিকঝাক প্রোফাইল)</div>
+                    <form id="profile-form" onsubmit="updateProfiles(event)">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <!-- Groom Details -->
+                            <div style="background: #ffffff; padding: 1rem; border-radius: 6px; border: 1px solid #e2d7c5;">
+                                <h4 style="color: var(--maroon-rich); margin-bottom: 0.8rem;">🤵 বর (ছোট ভাই) এর তথ্য</h4>
+                                <label>বোর নাম:</label>
+                                <input type="text" id="groom-name-input" placeholder="বোর নাম লিখুন" required>
+                                
+                                <label>বোর ছবি (ডেক্সটপ ফাইল নির্বাচন করুন):</label>
+                                <input type="file" id="groom-img-file" accept="image/*">
+                                
+                                <label>অথবা ছবির সরাসরি URL লিংক:</label>
+                                <input type="url" id="groom-img-url" placeholder="https://...">
+
+                                <label>বোর বিস্তারিত পরিচয় / বায়ো:</label>
+                                <textarea id="groom-bio-input" rows="4" placeholder="ছোট ভাই সম্পর্কে লিখুন..." required></textarea>
+                            </div>
+
+                            <!-- Bride Details -->
+                            <div style="background: #ffffff; padding: 1rem; border-radius: 6px; border: 1px solid #e2d7c5;">
+                                <h4 style="color: var(--maroon-rich); margin-bottom: 0.8rem;">👰 কনের (বধু) তথ্য</h4>
+                                <label>কনের নাম:</label>
+                                <input type="text" id="bride-name-input" placeholder="কনের নাম লিখুন" required>
+                                
+                                <label>কনের ছবি (ডেক্সটপ ফাইল নির্বাচন করুন):</label>
+                                <input type="file" id="bride-img-file" accept="image/*">
+                                
+                                <label>অথবা ছবির সরাসরি URL লিংক:</label>
+                                <input type="url" id="bride-img-url" placeholder="https://...">
+
+                                <label>কনের বিস্তারিত পরিচয় / বায়ো:</label>
+                                <textarea id="bride-bio-input" rows="4" placeholder="কনে সম্পর্কে লিখুন..." required></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-royal" style="margin-top: 1.2rem;">
+                            <span>✨</span> বর-কনের বিবরণ প্রোফাইলে প্রকাশ করুন
+                        </button>
+                    </form>
+                </div>
+
+                <!-- SECTION 2: ALBUM CONTENT UPLOAD -->
+                <div style="background: #fffcf7; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-gold);">
+                    <div class="admin-box-title">🖼️ অ্যালবামে নতুন ছবি / ভিডিও / লিংক যোগ করুন</div>
+                    <form id="upload-form" onsubmit="handleUpload(event)">
+                        
+                        <label>১. আপলোড অপশন নির্বাচন করুন:</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="upload_method" value="file" checked onchange="toggleUploadMethod()">
+                                💻 ডেক্সটপ / ডিভাইস থেকে আপলোড (File Upload)
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="upload_method" value="link" onchange="toggleUploadMethod()">
+                                🌐 অনলাইন / P2P স্ট্রিম লিংক (Embed URL)
+                            </label>
+                        </div>
+
+                        <label for="media-caption">২. কন্টেন্টের নাম / ক্যাপশন *</label>
+                        <input type="text" id="media-caption" placeholder="যেমন: শুভ গায়ে হলুদ ও ছাদ উৎসব" required>
+
+                        <!-- FILE INPUT CONTAINER -->
+                        <div id="file-input-section">
+                            <label for="media-file">৩. ডেক্সটপ থেকে ছবি বা ভিডিও ফাইল নির্বাচন করুন *</label>
+                            <input type="file" id="media-file" accept="image/*,video/*">
+                        </div>
+
+                        <!-- LINK INPUT CONTAINER -->
+                        <div id="link-input-section" style="display: none;">
+                            <label for="media-link-type">৩ (ক). লিংকের ধরন নির্বাচন করুন:</label>
+                            <select id="media-link-type">
+                                <option value="image_url">অনলাইন ছবির লিংক (Direct Image URL)</option>
+                                <option value="video_url">অনলাইন সরাসরি ভিডিও লিংক (Direct MP4 / Stream URL)</option>
+                                <option value="embed_url">ইউটিউব / ড্রাইভ / P2P এমবেড লিংক (YouTube Embed, Google Drive, P2P)</option>
+                            </select>
+
+                            <label for="media-link">৩ (খ). ওয়েব বা P2P স্ট্রিম লিংক (URL) লিখুন *</label>
+                            <input type="url" id="media-link" placeholder="https://www.youtube.com/embed/... অথবা ছবির সরাসরি লিংক">
+                        </div>
+
+                        <button type="submit" class="btn-royal" style="margin-top: 1rem;">
+                            <span>📤</span> অ্যালবামে কন্টেন্ট প্রকাশ করুন
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- LIGHTBOX / MODAL FOR FULL-SIZE VIEW -->
+    <div id="media-modal" class="modal" onclick="closeModalOnOuterClick(event)">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div id="modal-body" class="modal-media-container">
+                <!-- Expanded Media dynamic injection -->
+            </div>
+            <div class="modal-info">
+                <h3 id="modal-caption">ক্যাপশন</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="blessing">✨ "ভালোবাসা ও আশীর্বাদে দীর্ঘজীবী হোক নবদম্পতির আগামীর দিনগুলো" ✨</p>
+        <p>© 2026 ছোট ভাইয়ের বিবাহের শুভ উপহার অ্যালবাম | ভালোবাসা ও শ্রদ্ধায় নির্মিত</p>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // DEFAULT ADMIN PASSWORD
+        const ADMIN_PASSWORD = "1234";
+        let isAdminLoggedIn = false;
+
+        // INITIAL COUPLE PROFILE DATA
+        const defaultProfiles = {
+            groomName: 'শ্রদ্ধেয় ছোট ভাই',
+            groomBio: 'আমাদের স্নেহের ছোট ভাই। শিক্ষাজীবনে অসাধারণ কৃতিত্বের পাশাপাশি তার অমায়িক ব্যবহার ও দূরদর্শী চিন্তা আমাদের পরিবারের গর্ব। জীবনের নতুন এই দ্বিতীয় অধ্যায়ে তিনি পা রাখছেন অশেষ শুভকামনা ও আশীর্বাদ নিয়ে।',
+            groomImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80',
+            brideName: 'স্নেহের কনে',
+            brideBio: 'আমাদের পরিবারের নতুন সদস্য ও স্নেহের লক্ষ্মী কনে। তার গুণাবলী, মাধুর্য ও মার্জিত ব্যক্তিত্ব আমাদের পরিবারকে আরও আলোকময় করে তুলেছে। নবদম্পতির সুন্দর ও সুখে-ভরা আগামীর জন্য পরম করুণাময়ের কাছে প্রার্থনারত।',
+            brideImg: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80'
+        };
+
+        // INITIAL DEMO DATA FOR MEDIA & COMMENTS
+        const initialMedia = [
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80',
+                caption: 'শুভ বর-কনের প্রথম আলাপ'
+            },
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
+                caption: 'শুভ বিবাহ ও বরযাত্রা মুহূর্ত'
+            },
+            {
+                type: 'embed_url',
+                src: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                caption: 'শুভ বিবাহের স্মরণীয় ভিডিওচিত্র'
+            }
+        ];
+
+        const initialComments = [
+            {
+                name: 'প্রবীর চৌধুরী',
+                relation: 'বড় ভাই',
+                message: 'ছোট ভাই ও ছোট বৌমার জীবন আনন্দ, ভালোবাসা ও অনাবিল শান্তিতে ভরে উঠুক। শুভ বিবাহ!',
+                date: '07 Aug 2026'
+            }
+        ];
+
+        // LOAD DATA FROM LOCAL STORAGE
+        let coupleProfiles = JSON.parse(localStorage.getItem('wedding_profiles_v3')) || defaultProfiles;
+        let mediaData = JSON.parse(localStorage.getItem('wedding_media_v3')) || initialMedia;
+        let commentsData = JSON.parse(localStorage.getItem('wedding_comments_v3')) || initialComments;
+
+        // RENDER COUPLE PROFILES IN ZIGZAG LOOK
+        function renderProfiles() {
+            document.getElementById('display-groom-name').innerText = coupleProfiles.groomName;
+            document.getElementById('display-groom-bio').innerText = coupleProfiles.groomBio;
+            document.getElementById('display-groom-img').src = coupleProfiles.groomImg;
+
+            document.getElementById('display-bride-name').innerText = coupleProfiles.brideName;
+            document.getElementById('display-bride-bio').innerText = coupleProfiles.brideBio;
+            document.getElementById('display-bride-img').src = coupleProfiles.brideImg;
+
+            // Populate Admin Form Inputs
+            document.getElementById('groom-name-input').value = coupleProfiles.groomName;
+            document.getElementById('groom-bio-input').value = coupleProfiles.groomBio;
+            document.getElementById('bride-name-input').value = coupleProfiles.brideName;
+            document.getElementById('bride-bio-input').value = coupleProfiles.brideBio;
+        }
+
+        // UPDATE PROFILES FROM ADMIN
+        async function updateProfiles(e) {
+            e.preventDefault();
+
+            const groomName = document.getElementById('groom-name-input').value;
+            const groomBio = document.getElementById('groom-bio-input').value;
+            const groomImgFile = document.getElementById('groom-img-file').files[0];
+            const groomImgUrl = document.getElementById('groom-img-url').value;
+
+            const brideName = document.getElementById('bride-name-input').value;
+            const brideBio = document.getElementById('bride-bio-input').value;
+            const brideImgFile = document.getElementById('bride-img-file').files[0];
+            const brideImgUrl = document.getElementById('bride-img-url').value;
+
+            coupleProfiles.groomName = groomName;
+            coupleProfiles.groomBio = groomBio;
+            coupleProfiles.brideName = brideName;
+            coupleProfiles.brideBio = brideBio;
+
+            // Helper to read file as DataURL
+            const readFile = (file) => new Promise((resolve) => {
+                const reader = new FileReader();
+                reader.onload = (evt) => resolve(evt.target.result);
+                reader.readAsDataURL(file);
+            });
+
+            if (groomImgFile) {
+                coupleProfiles.groomImg = await readFile(groomImgFile);
+            } else if (groomImgUrl) {
+                coupleProfiles.groomImg = groomImgUrl;
+            }
+
+            if (brideImgFile) {
+                coupleProfiles.brideImg = await readFile(brideImgFile);
+            } else if (brideImgUrl) {
+                coupleProfiles.brideImg = brideImgUrl;
+            }
+
+            localStorage.setItem('wedding_profiles_v3', JSON.stringify(coupleProfiles));
+            renderProfiles();
+            alert('বর ও কনের বিবরণ এবং ছবি সফলতা সহকারে আপডেট হয়েছে!');
+            switchTab('public');
+        }
+
+        // TAB NAVIGATION
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('nav button').forEach(el => el.classList.remove('active'));
+
+            if (tabName === 'public') {
+                document.getElementById('public-tab').classList.add('active');
+                document.getElementById('btn-public').classList.add('active');
+            } else {
+                document.getElementById('admin-tab').classList.add('active');
+                document.getElementById('btn-admin').classList.add('active');
+            }
+        }
+
+        // ADMIN PASSWORD VERIFICATION
+        function verifyPassword(e) {
+            e.preventDefault();
+            const inputPass = document.getElementById('admin-pass-input').value;
+            if (inputPass === ADMIN_PASSWORD) {
+                isAdminLoggedIn = true;
+                document.getElementById('admin-auth').style.display = 'none';
+                document.getElementById('admin-dashboard').style.display = 'block';
+                document.getElementById('pass-error').style.display = 'none';
+                document.getElementById('admin-pass-input').value = '';
+            } else {
+                document.getElementById('pass-error').style.display = 'block';
+            }
+        }
+
+        function logoutAdmin() {
+            isAdminLoggedIn = false;
+            document.getElementById('admin-auth').style.display = 'block';
+            document.getElementById('admin-dashboard').style.display = 'none';
+        }
+
+        // TOGGLE FILE VS LINK INPUT IN ADMIN
+        function toggleUploadMethod() {
+            const method = document.querySelector('input[name="upload_method"]:checked').value;
+            if (method === 'file') {
+                document.getElementById('file-input-section').style.display = 'block';
+                document.getElementById('link-input-section').style.display = 'none';
+            } else {
+                document.getElementById('file-input-section').style.display = 'none';
+                document.getElementById('link-input-section').style.display = 'block';
+            }
+        }
+
+        // RENDER GALLERY THUMBNAILS
+        function renderGallery() {
+            const container = document.getElementById('gallery-container');
+            container.innerHTML = '';
+
+            if (mediaData.length === 0) {
+                container.innerHTML = '<p style="grid-column: 1/-1; text-align:center; color: var(--text-muted); padding: 2rem;">এখনো পর্যন্ত কোনো ছবি বা ভিডিও যোগ করা হয়নি। এডমিন প্যানেল থেকে আপলোড করুন।</p>';
+                return;
+            }
+
+            mediaData.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'thumb-card';
+                card.onclick = () => openModal(index);
+
+                let mediaHTML = '';
+                if (item.type === 'image' || item.type === 'image_url') {
+                    mediaHTML = `
+                        <div class="thumb-media-wrapper">
+                            <img src="${item.src}" alt="${item.caption}" loading="lazy">
+                            <div class="thumb-caption">${item.caption}</div>
+                        </div>`;
+                } else if (item.type === 'video' || item.type === 'video_url') {
+                    mediaHTML = `
+                        <div class="thumb-media-wrapper">
+                            <video src="${item.src}#t=0.5" preload="metadata"></video>
+                            <div class="play-overlay">▶</div>
+                            <div class="thumb-caption">${item.caption}</div>
+                        </div>`;
+                } else if (item.type === 'embed_url') {
+                    mediaHTML = `
+                        <div class="thumb-media-wrapper" style="background:#2d0b10; display:flex; align-items:center; justify-content:center;">
+                            <div style="color:var(--gold-light); font-size: 2rem;">🎬</div>
+                            <div class="play-overlay">▶</div>
+                            <div class="thumb-caption">${item.caption}</div>
+                        </div>`;
+                }
+
+                card.innerHTML = mediaHTML;
+                container.appendChild(card);
+            });
+        }
+
+        // LIGHTBOX / MODAL CONTROL
+        function openModal(index) {
+            const item = mediaData[index];
+            const modal = document.getElementById('media-modal');
+            const modalBody = document.getElementById('modal-body');
+            const modalCaption = document.getElementById('modal-caption');
+
+            modalBody.innerHTML = '';
+            modalCaption.innerText = item.caption;
+
+            if (item.type === 'image' || item.type === 'image_url') {
+                modalBody.innerHTML = `<img src="${item.src}" alt="${item.caption}">`;
+            } else if (item.type === 'video' || item.type === 'video_url') {
+                modalBody.innerHTML = `<video src="${item.src}" controls autoplay style="max-height: 68vh; max-width:100%;"></video>`;
+            } else if (item.type === 'embed_url') {
+                modalBody.innerHTML = `<iframe src="${item.src}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            }
+
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('media-modal');
+            const modalBody = document.getElementById('modal-body');
+            modalBody.innerHTML = '';
+            modal.classList.remove('active');
+        }
+
+        function closeModalOnOuterClick(e) {
+            if (e.target.id === 'media-modal') {
+                closeModal();
+            }
+        }
+
+        // HANDLE ADMIN ALBUM UPLOAD
+        function handleUpload(e) {
+            e.preventDefault();
+            const method = document.querySelector('input[name="upload_method"]:checked').value;
+            const caption = document.getElementById('media-caption').value;
+
+            if (method === 'file') {
+                const fileInput = document.getElementById('media-file');
+                const file = fileInput.files[0];
+
+                if (!file) {
+                    alert('অনুগ্রহ করে একটি ফাইল নির্বাচন করুন!');
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    const isVideo = file.type.startsWith('video');
+                    const newItem = {
+                        type: isVideo ? 'video' : 'image',
+                        src: evt.target.result,
+                        caption: caption
+                    };
+                    saveMediaItem(newItem);
+                };
+                reader.readAsDataURL(file);
+
+            } else {
+                const linkType = document.getElementById('media-link-type').value;
+                const linkUrl = document.getElementById('media-link').value;
+
+                if (!linkUrl) {
+                    alert('অনুগ্রহ করে লিংকের ঠিকানা (URL) প্রদান করুন!');
+                    return;
+                }
+
+                const newItem = {
+                    type: linkType,
+                    src: linkUrl,
+                    caption: caption
+                };
+                saveMediaItem(newItem);
+            }
+        }
+
+        function saveMediaItem(newItem) {
+            mediaData.unshift(newItem);
+            localStorage.setItem('wedding_media_v3', JSON.stringify(mediaData));
+            renderGallery();
+            alert('কন্টেন্ট সফলভাবে রাজকীয় অ্যালবামে যুক্ত হয়েছে!');
+            document.getElementById('upload-form').reset();
+            switchTab('public');
+        }
+
+        // COMMENTS SYSTEM
+        function addComment(e) {
+            e.preventDefault();
+            const name = document.getElementById('guest-name').value;
+            const relation = document.getElementById('guest-relation').value;
+            const message = document.getElementById('guest-message').value;
+            
+            const today = new Date();
+            const dateStr = today.toLocaleDateString('bn-BD', { day: 'numeric', month: 'long', year: 'numeric' });
+
+            const newComment = {
+                name: name,
+                relation: relation ? `(${relation})` : '',
+                message: message,
+                date: dateStr
+            };
+
+            commentsData.unshift(newComment);
+            localStorage.setItem('wedding_comments_v3', JSON.stringify(commentsData));
+            renderComments();
+
+            document.getElementById('comment-form').reset();
+            alert('আপনার শুভকামনা ও আশীর্বাদ বার্তাটি নিবন্ধিত হয়েছে!');
+        }
+
+        function renderComments() {
+            const container = document.getElementById('comments-container');
+            container.innerHTML = '';
+
+            if (commentsData.length === 0) {
+                container.innerHTML = '<p style="color:var(--text-muted); text-align:center;">প্রথম আশীর্বাদ বার্তাটি আপনিই প্রদান করুন!</p>';
+                return;
+            }
+
+            commentsData.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'comment-card';
+                div.innerHTML = `
+                    <div class="comment-header">
+                        <div class="comment-author">
+                            <span>🌹</span> ${item.name} <span style="font-size:0.85rem; font-weight:normal; color:var(--text-muted);">${item.relation}</span>
+                        </div>
+                        <div class="comment-date">📅 ${item.date}</div>
+                    </div>
+                    <div class="comment-body">${item.message}</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        // ESCAPE KEY TO CLOSE MODAL
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // INITIAL RENDER
+        renderProfiles();
+        renderGallery();
+        renderComments();
+    </script>
+</body>
+</html>
