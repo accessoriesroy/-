@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    
-    
-    
-     <!-- Open Graph / Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শুভ বিবাহ | রাজকীয় ডিজিটাল অ্যালবাম ও স্মৃতিকথা</title>
+
+    <!-- Open Graph / Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arradio.shop/">
     <meta property="og:title" content="Accessories Roy Live Radio Network">
     <meta property="og:description" content="Listen to live radio streams seamlessly in low bandwidth.">
     <meta property="og:image" content="https://i.ibb.co/chccvf2z/Screenshot-20260807-214701-Google.png">
     
-     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/chccvf2z/Screenshot-20260807-214701-Google.png">
-    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/chccvf2z/Screenshot-20260807-214701-Google.png">
     
-    
-    
-    
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>শুভ বিবাহ | রাজকীয় ডিজিটাল অ্যালবাম ও স্মৃতিকথা</title>
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Firebase Compat SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
     <style>
         :root {
             --maroon-deep: #4a0e17;
@@ -217,7 +216,6 @@
             border-color: var(--gold-primary);
         }
 
-        /* ZIGZAG LAYOUT DIRECTIVES */
         .profile-card.left-img {
             flex-direction: row;
         }
@@ -604,17 +602,9 @@
             background-color: var(--maroon-deep);
             color: #d3c2b5;
             text-align: center;
-            padding: 2rem 1rem;
             margin-top: auto;
             border-top: 3px solid var(--gold-dark);
             font-size: 0.95rem;
-        }
-
-        footer p.blessing {
-            color: var(--gold-light);
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
         }
 
         /* RESPONSIVE DESIGN */
@@ -661,11 +651,11 @@
                 <!-- Groom Profile (Left Image) -->
                 <div class="profile-card left-img">
                     <div class="profile-img-container">
-                        <img id="display-groom-img" src="   https://i.ibb.co/p6gYjSNz/Screenshot-20260807-222340-Facebook.png   " alt="বর">
+                        <img id="display-groom-img" src="https://i.ibb.co/p6gYjSNz/Screenshot-20260807-222340-Facebook.png" alt="বর">
                     </div>
                     <div class="profile-content">
                         <span class="profile-tag">🤵 নববিবাহিত বর (ছোট ভাই)</span>
-                        <h2 class="profile-name" id="display-groom-name">  আদরের ছোট ভাই   </h2>
+                        <h2 class="profile-name" id="display-groom-name">আদরের ছোট ভাই</h2>
                         <p class="profile-bio" id="display-groom-bio">
                             আমাদের স্নেহের ছোট ভাই। শিক্ষাজীবনে অসাধারণ কৃতিত্বের পাশাপাশি তার অমায়িক ব্যবহার ও দূরদর্শী চিন্তা আমাদের পরিবারের গর্ব। জীবনের নতুন এই দ্বিতীয় অধ্যায়ে তিনি পা রাখছেন অশেষ শুভকামনা ও আশীর্বাদ নিয়ে।
                         </p>
@@ -675,11 +665,11 @@
                 <!-- Bride Profile (Right Image - ZigZag Look) -->
                 <div class="profile-card right-img">
                     <div class="profile-img-container">
-                        <img id="display-bride-img" src="   https://i.ibb.co/MyXYWfc4/Screenshot-20260807-222216-Facebook-1.png  " alt="কনে">
+                        <img id="display-bride-img" src="https://i.ibb.co/MyXYWfc4/Screenshot-20260807-222216-Facebook-1.png" alt="কনে">
                     </div>
                     <div class="profile-content">
                         <span class="profile-tag">👰 নববিবাহিত কনে (বধু)</span>
-                        <h2 class="profile-name" id="display-bride-name">স্নেহের বৌমা   </h2>
+                        <h2 class="profile-name" id="display-bride-name">স্নেহের বৌমা</h2>
                         <p class="profile-bio" id="display-bride-bio">
                             আমাদের পরিবারের নতুন সদস্য ও স্নেহের লক্ষ্মী কনে। তার গুণাবলী, মাধুর্য ও মার্জিত ব্যক্তিত্ব আমাদের পরিবারকে আরও আলোকময় করে তুলেছে। নবদম্পতির সুন্দর ও সুখে-ভরা আগামীর জন্য পরম করুণাময়ের কাছে প্রার্থনারত।
                         </p>
@@ -805,7 +795,7 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn-royal" style="margin-top: 1.2rem;">
+                        <button type="submit" id="btn-save-profile" class="btn-royal" style="margin-top: 1.2rem;">
                             <span>✨</span> বর-কনের বিবরণ প্রোফাইলে প্রকাশ করুন
                         </button>
                     </form>
@@ -850,7 +840,7 @@
                             <input type="url" id="media-link" placeholder="https://www.youtube.com/embed/... অথবা ছবির সরাসরি লিংক">
                         </div>
 
-                        <button type="submit" class="btn-royal" style="margin-top: 1rem;">
+                        <button type="submit" id="btn-upload-media" class="btn-royal" style="margin-top: 1rem;">
                             <span>📤</span> অ্যালবামে কন্টেন্ট প্রকাশ করুন
                         </button>
                     </form>
@@ -877,40 +867,49 @@
 
     <!-- FOOTER -->
     <footer>
-      
-
-    
-    <div style="text-align: center; color: #ffffff; background-color: #3b0a11; padding: 20px; font-family: Arial, sans-serif;">
-  <p>© 2026 ছোট ভাইয়ের বিবাহের শুভ উপহার অ্যালবাম |</p>
-  <p>ভালোবাসা ও হৃদতায় নির্মিত</p>
-  <p>
-    © 2026 
-    <a href="https://www.accessoriesroy.in" target="_blank" style="color: #ffffff; text-decoration: underline;">
-      www.accessoriesroy.in
-    </a>
-  </p>
-</div>
-    
-    
+        <div style="text-align: center; color: #ffffff; background-color: #3b0a11; padding: 20px; font-family: Arial, sans-serif;">
+            <p>© 2026 ছোট ভাইয়ের বিবাহের শুভ উপহার অ্যালবাম |</p>
+            <p>ভালোবাসা ও হৃদতায় নির্মিত</p>
+            <p>
+                © 2026 
+                <a href="https://www.accessoriesroy.in" target="_blank" style="color: #ffffff; text-decoration: underline;">
+                    www.accessoriesroy.in
+                </a>
+            </p>
+        </div>
     </footer>
 
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- JAVASCRIPT LOGIC WITH FIREBASE & IMGBB AUTO-SYNC -->
     <script>
-        // DEFAULT ADMIN PASSWORD
-        const ADMIN_PASSWORD = "1234";
-        let isAdminLoggedIn = false;
+        // CONFIGURATIONS
+        const ADMIN_PASSWORD = "799120,p";
+        const IMGBB_API_KEY = "50ff655abc412a556158150ce9ee38e8";
 
-        // INITIAL COUPLE PROFILE DATA
-        const defaultProfiles = {
-            groomName: 'শ্রদ্ধেয় ছোট ভাই',
-            groomBio: 'আমাদের স্নেহের ছোট ভাই। শিক্ষাজীবনে অসাধারণ কৃতিত্বের পাশাপাশি তার অমায়িক ব্যবহার ও দূরদর্শী চিন্তা আমাদের পরিবারের গর্ব। জীবনের নতুন এই দ্বিতীয় অধ্যায়ে তিনি পা রাখছেন অশেষ শুভকামনা ও আশীর্বাদ নিয়ে।',
-            groomImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80',
-            brideName: 'স্নেহের কনে',
-            brideBio: 'আমাদের পরিবারের নতুন সদস্য ও স্নেহের লক্ষ্মী কনে। তার গুণাবলী, মাধুর্য ও মার্জিত ব্যক্তিত্ব আমাদের পরিবারকে আরও আলোকময় করে তুলেছে। নবদম্পতির সুন্দর ও সুখে-ভরা আগামীর জন্য পরম করুণাময়ের কাছে প্রার্থনারত।',
-            brideImg: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80'
+        const firebaseConfig = {
+            apiKey: "AIzaSyChVTRpORwDAGKtjkskQdyxAcUi_-JF5XY",
+            authDomain: "wedding-album-f9b4c.firebaseapp.com",
+            projectId: "wedding-album-f9b4c",
+            storageBucket: "wedding-album-f9b4c.firebasestorage.app",
+            messagingSenderId: "102389125770",
+            appId: "1:102389125770:web:c4cc81e8cc5bf0db3f5373"
         };
 
-        // INITIAL DEMO DATA FOR MEDIA & COMMENTS
+        // INITIALIZE FIREBASE
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        let isAdminLoggedIn = false;
+
+        // INITIAL DEFAULT DATA
+        const defaultProfiles = {
+            groomName: 'আদরের ছোট ভাই',
+            groomBio: 'আমাদের স্নেহের ছোট ভাই। শিক্ষাজীবনে অসাধারণ কৃতিত্বের পাশাপাশি তার অমায়িক ব্যবহার ও দূরদর্শী চিন্তা আমাদের পরিবারের গর্ব। জীবনের নতুন এই দ্বিতীয় অধ্যায়ে তিনি পা রাখছেন অশেষ শুভকামনা ও আশীর্বাদ নিয়ে।',
+            groomImg: 'https://i.ibb.co/p6gYjSNz/Screenshot-20260807-222340-Facebook.png',
+            brideName: 'স্নেহের বৌমা',
+            brideBio: 'আমাদের পরিবারের নতুন সদস্য ও স্নেহের লক্ষ্মী কনে। তার গুণাবলী, মাধুর্য ও মার্জিত ব্যক্তিত্ব আমাদের পরিবারকে আরও আলোকময় করে তুলেছে। নবদম্পতির সুন্দর ও সুখে-ভরা আগামীর জন্য পরম করুণাময়ের কাছে প্রার্থনারত।',
+            brideImg: 'https://i.ibb.co/MyXYWfc4/Screenshot-20260807-222216-Facebook-1.png'
+        };
+
         const initialMedia = [
             {
                 type: 'image',
@@ -931,127 +930,78 @@
 
         const initialComments = [
             {
-                name: 'প্রবীর কৃষ্ণ রায় ',
+                name: 'প্রবীর কৃষ্ণ রায়',
                 relation: 'বড় ভাই',
                 message: 'ছোট ভাই ও ছোট বৌমার জীবন আনন্দ, ভালোবাসা ও অনাবিল শান্তিতে ভরে উঠুক। শুভ বিবাহ!',
                 date: '07 Aug 2026'
             }
         ];
 
-        // LOAD DATA FROM LOCAL STORAGE
-        let coupleProfiles = JSON.parse(localStorage.getItem('wedding_profiles_v3')) || defaultProfiles;
-        let mediaData = JSON.parse(localStorage.getItem('wedding_media_v3')) || initialMedia;
-        let commentsData = JSON.parse(localStorage.getItem('wedding_comments_v3')) || initialComments;
+        let mediaData = [];
+        let commentsData = [];
 
-        // RENDER COUPLE PROFILES IN ZIGZAG LOOK
-        function renderProfiles() {
-            document.getElementById('display-groom-name').innerText = coupleProfiles.groomName;
-            document.getElementById('display-groom-bio').innerText = coupleProfiles.groomBio;
-            document.getElementById('display-groom-img').src = coupleProfiles.groomImg;
-
-            document.getElementById('display-bride-name').innerText = coupleProfiles.brideName;
-            document.getElementById('display-bride-bio').innerText = coupleProfiles.brideBio;
-            document.getElementById('display-bride-img').src = coupleProfiles.brideImg;
-
-            // Populate Admin Form Inputs
-            document.getElementById('groom-name-input').value = coupleProfiles.groomName;
-            document.getElementById('groom-bio-input').value = coupleProfiles.groomBio;
-            document.getElementById('bride-name-input').value = coupleProfiles.brideName;
-            document.getElementById('bride-bio-input').value = coupleProfiles.brideBio;
-        }
-
-        // UPDATE PROFILES FROM ADMIN
-        async function updateProfiles(e) {
-            e.preventDefault();
-
-            const groomName = document.getElementById('groom-name-input').value;
-            const groomBio = document.getElementById('groom-bio-input').value;
-            const groomImgFile = document.getElementById('groom-img-file').files[0];
-            const groomImgUrl = document.getElementById('groom-img-url').value;
-
-            const brideName = document.getElementById('bride-name-input').value;
-            const brideBio = document.getElementById('bride-bio-input').value;
-            const brideImgFile = document.getElementById('bride-img-file').files[0];
-            const brideImgUrl = document.getElementById('bride-img-url').value;
-
-            coupleProfiles.groomName = groomName;
-            coupleProfiles.groomBio = groomBio;
-            coupleProfiles.brideName = brideName;
-            coupleProfiles.brideBio = brideBio;
-
-            // Helper to read file as DataURL
-            const readFile = (file) => new Promise((resolve) => {
-                const reader = new FileReader();
-                reader.onload = (evt) => resolve(evt.target.result);
-                reader.readAsDataURL(file);
+        // HELPER: UPLOAD FILE TO IMGBB CLOUD
+        async function uploadImageToImgBB(file) {
+            const formData = new FormData();
+            formData.append("image", file);
+            const res = await fetch(`https://api.imgbb.com/1/upload?key=${IMGBB_API_KEY}`, {
+                method: "POST",
+                body: formData
             });
-
-            if (groomImgFile) {
-                coupleProfiles.groomImg = await readFile(groomImgFile);
-            } else if (groomImgUrl) {
-                coupleProfiles.groomImg = groomImgUrl;
-            }
-
-            if (brideImgFile) {
-                coupleProfiles.brideImg = await readFile(brideImgFile);
-            } else if (brideImgUrl) {
-                coupleProfiles.brideImg = brideImgUrl;
-            }
-
-            localStorage.setItem('wedding_profiles_v3', JSON.stringify(coupleProfiles));
-            renderProfiles();
-            alert('বর ও কনের বিবরণ এবং ছবি সফলতা সহকারে আপডেট হয়েছে!');
-            switchTab('public');
-        }
-
-        // TAB NAVIGATION
-        function switchTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('nav button').forEach(el => el.classList.remove('active'));
-
-            if (tabName === 'public') {
-                document.getElementById('public-tab').classList.add('active');
-                document.getElementById('btn-public').classList.add('active');
+            const data = await res.json();
+            if (data.success) {
+                return data.data.url;
             } else {
-                document.getElementById('admin-tab').classList.add('active');
-                document.getElementById('btn-admin').classList.add('active');
+                throw new Error("ইমেজ ক্লাউড আপলোড ব্যর্থ হয়েছে!");
             }
         }
 
-        // ADMIN PASSWORD VERIFICATION
-        function verifyPassword(e) {
-            e.preventDefault();
-            const inputPass = document.getElementById('admin-pass-input').value;
-            if (inputPass === ADMIN_PASSWORD) {
-                isAdminLoggedIn = true;
-                document.getElementById('admin-auth').style.display = 'none';
-                document.getElementById('admin-dashboard').style.display = 'block';
-                document.getElementById('pass-error').style.display = 'none';
-                document.getElementById('admin-pass-input').value = '';
+        // REALTIME FIREBASE LISTENERS
+        db.collection("wedding_profiles").doc("couple").onSnapshot(doc => {
+            let p = defaultProfiles;
+            if (doc.exists) {
+                p = doc.data();
             } else {
-                document.getElementById('pass-error').style.display = 'block';
+                db.collection("wedding_profiles").doc("couple").set(defaultProfiles);
             }
-        }
+            renderProfiles(p);
+        });
 
-        function logoutAdmin() {
-            isAdminLoggedIn = false;
-            document.getElementById('admin-auth').style.display = 'block';
-            document.getElementById('admin-dashboard').style.display = 'none';
-        }
-
-        // TOGGLE FILE VS LINK INPUT IN ADMIN
-        function toggleUploadMethod() {
-            const method = document.querySelector('input[name="upload_method"]:checked').value;
-            if (method === 'file') {
-                document.getElementById('file-input-section').style.display = 'block';
-                document.getElementById('link-input-section').style.display = 'none';
+        db.collection("wedding_media").orderBy("createdAt", "desc").onSnapshot(snapshot => {
+            if (snapshot.empty) {
+                mediaData = initialMedia;
             } else {
-                document.getElementById('file-input-section').style.display = 'none';
-                document.getElementById('link-input-section').style.display = 'block';
+                mediaData = snapshot.docs.map(doc => doc.data());
             }
+            renderGallery();
+        });
+
+        db.collection("wedding_comments").orderBy("createdAt", "desc").onSnapshot(snapshot => {
+            if (snapshot.empty) {
+                commentsData = initialComments;
+            } else {
+                commentsData = snapshot.docs.map(doc => doc.data());
+            }
+            renderComments();
+        });
+
+        // RENDER FUNCTIONS
+        function renderProfiles(p) {
+            document.getElementById('display-groom-name').innerText = p.groomName || '';
+            document.getElementById('display-groom-bio').innerText = p.groomBio || '';
+            if(p.groomImg) document.getElementById('display-groom-img').src = p.groomImg;
+
+            document.getElementById('display-bride-name').innerText = p.brideName || '';
+            document.getElementById('display-bride-bio').innerText = p.brideBio || '';
+            if(p.brideImg) document.getElementById('display-bride-img').src = p.brideImg;
+
+            // Admin Form Pre-fill
+            document.getElementById('groom-name-input').value = p.groomName || '';
+            document.getElementById('groom-bio-input').value = p.groomBio || '';
+            document.getElementById('bride-name-input').value = p.brideName || '';
+            document.getElementById('bride-bio-input').value = p.brideBio || '';
         }
 
-        // RENDER GALLERY THUMBNAILS
         function renderGallery() {
             const container = document.getElementById('gallery-container');
             container.innerHTML = '';
@@ -1094,7 +1044,221 @@
             });
         }
 
-        // LIGHTBOX / MODAL CONTROL
+        function renderComments() {
+            const container = document.getElementById('comments-container');
+            container.innerHTML = '';
+
+            if (commentsData.length === 0) {
+                container.innerHTML = '<p style="color:var(--text-muted); text-align:center;">প্রথম আশীর্বাদ বার্তাটি আপনিই প্রদান করুন!</p>';
+                return;
+            }
+
+            commentsData.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'comment-card';
+                div.innerHTML = `
+                    <div class="comment-header">
+                        <div class="comment-author">
+                            <span>🌹</span> ${item.name} <span style="font-size:0.85rem; font-weight:normal; color:var(--text-muted);">${item.relation || ''}</span>
+                        </div>
+                        <div class="comment-date">📅 ${item.date}</div>
+                    </div>
+                    <div class="comment-body">${item.message}</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        // ADMIN UPDATE PROFILES
+        async function updateProfiles(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btn-save-profile');
+            btn.innerText = "ক্লাউডে আপলোড হচ্ছে...";
+            btn.disabled = true;
+
+            try {
+                const groomName = document.getElementById('groom-name-input').value;
+                const groomBio = document.getElementById('groom-bio-input').value;
+                const groomImgFile = document.getElementById('groom-img-file').files[0];
+                const groomImgUrl = document.getElementById('groom-img-url').value;
+
+                const brideName = document.getElementById('bride-name-input').value;
+                const brideBio = document.getElementById('bride-bio-input').value;
+                const brideImgFile = document.getElementById('bride-img-file').files[0];
+                const brideImgUrl = document.getElementById('bride-img-url').value;
+
+                let updateData = {
+                    groomName, groomBio, brideName, brideBio
+                };
+
+                if (groomImgFile) {
+                    updateData.groomImg = await uploadImageToImgBB(groomImgFile);
+                } else if (groomImgUrl) {
+                    updateData.groomImg = groomImgUrl;
+                }
+
+                if (brideImgFile) {
+                    updateData.brideImg = await uploadImageToImgBB(brideImgFile);
+                } else if (brideImgUrl) {
+                    updateData.brideImg = brideImgUrl;
+                }
+
+                await db.collection("wedding_profiles").doc("couple").set(updateData, { merge: true });
+                alert('বর ও কনের বিবরণ এবং ছবি সফলভাবে ক্লাউডে আপডেট হয়েছে!');
+                switchTab('public');
+            } catch (error) {
+                alert('আপলোড ব্যর্থ হয়েছে: ' + error.message);
+            } finally {
+                btn.innerText = "✨ বর-কনের বিবরণ প্রোফাইলে প্রকাশ করুন";
+                btn.disabled = false;
+            }
+        }
+
+        // ADMIN MEDIA UPLOAD
+        async function handleUpload(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btn-upload-media');
+            const method = document.querySelector('input[name="upload_method"]:checked').value;
+            const caption = document.getElementById('media-caption').value;
+
+            btn.innerText = "ক্লাউডে আপলোড হচ্ছে...";
+            btn.disabled = true;
+
+            try {
+                let mediaSrc = '';
+                let mediaType = 'image';
+
+                if (method === 'file') {
+                    const fileInput = document.getElementById('media-file');
+                    const file = fileInput.files[0];
+
+                    if (!file) {
+                        alert('অনুগ্রহ করে একটি ফাইল নির্বাচন করুন!');
+                        btn.innerText = "📤 অ্যালবামে কন্টেন্ট প্রকাশ করুন";
+                        btn.disabled = false;
+                        return;
+                    }
+
+                    if (file.type.startsWith('video')) {
+                        // Read video as Base64/DataURL if video
+                        mediaType = 'video';
+                        mediaSrc = await new Promise((resolve) => {
+                            const reader = new FileReader();
+                            reader.onload = (evt) => resolve(evt.target.result);
+                            reader.readAsDataURL(file);
+                        });
+                    } else {
+                        mediaType = 'image';
+                        mediaSrc = await uploadImageToImgBB(file);
+                    }
+
+                } else {
+                    const linkType = document.getElementById('media-link-type').value;
+                    const linkUrl = document.getElementById('media-link').value;
+
+                    if (!linkUrl) {
+                        alert('অনুগ্রহ করে লিংকের ঠিকানা (URL) প্রদান করুন!');
+                        btn.innerText = "📤 অ্যালবামে কন্টেন্ট প্রকাশ করুন";
+                        btn.disabled = false;
+                        return;
+                    }
+
+                    mediaType = linkType;
+                    mediaSrc = linkUrl;
+                }
+
+                await db.collection("wedding_media").add({
+                    type: mediaType,
+                    src: mediaSrc,
+                    caption: caption,
+                    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+                });
+
+                alert('কন্টেন্ট সফলভাবে ক্লাউড অ্যালবামে যুক্ত হয়েছে!');
+                document.getElementById('upload-form').reset();
+                switchTab('public');
+
+            } catch (error) {
+                alert('আপলোড ব্যর্থ হয়েছে: ' + error.message);
+            } finally {
+                btn.innerText = "📤 অ্যালবামে কন্টেন্ট প্রকাশ করুন";
+                btn.disabled = false;
+            }
+        }
+
+        // ADD GUEST COMMENT TO FIREBASE
+        async function addComment(e) {
+            e.preventDefault();
+            const name = document.getElementById('guest-name').value;
+            const relation = document.getElementById('guest-relation').value;
+            const message = document.getElementById('guest-message').value;
+            
+            const today = new Date();
+            const dateStr = today.toLocaleDateString('bn-BD', { day: 'numeric', month: 'long', year: 'numeric' });
+
+            try {
+                await db.collection("wedding_comments").add({
+                    name: name,
+                    relation: relation ? `(${relation})` : '',
+                    message: message,
+                    date: dateStr,
+                    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+                });
+
+                document.getElementById('comment-form').reset();
+                alert('আপনার শুভকামনা ও আশীর্বাদ বার্তাটি ক্লাউডে নিবন্ধিত হয়েছে!');
+            } catch (error) {
+                alert('বার্তা পাঠাতে সমস্যা হয়েছে: ' + error.message);
+            }
+        }
+
+        // TAB NAVIGATION
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('nav button').forEach(el => el.classList.remove('active'));
+
+            if (tabName === 'public') {
+                document.getElementById('public-tab').classList.add('active');
+                document.getElementById('btn-public').classList.add('active');
+            } else {
+                document.getElementById('admin-tab').classList.add('active');
+                document.getElementById('btn-admin').classList.add('active');
+            }
+        }
+
+        // ADMIN PASSWORD
+        function verifyPassword(e) {
+            e.preventDefault();
+            const inputPass = document.getElementById('admin-pass-input').value;
+            if (inputPass === ADMIN_PASSWORD) {
+                isAdminLoggedIn = true;
+                document.getElementById('admin-auth').style.display = 'none';
+                document.getElementById('admin-dashboard').style.display = 'block';
+                document.getElementById('pass-error').style.display = 'none';
+                document.getElementById('admin-pass-input').value = '';
+            } else {
+                document.getElementById('pass-error').style.display = 'block';
+            }
+        }
+
+        function logoutAdmin() {
+            isAdminLoggedIn = false;
+            document.getElementById('admin-auth').style.display = 'block';
+            document.getElementById('admin-dashboard').style.display = 'none';
+        }
+
+        function toggleUploadMethod() {
+            const method = document.querySelector('input[name="upload_method"]:checked').value;
+            if (method === 'file') {
+                document.getElementById('file-input-section').style.display = 'block';
+                document.getElementById('link-input-section').style.display = 'none';
+            } else {
+                document.getElementById('file-input-section').style.display = 'none';
+                document.getElementById('link-input-section').style.display = 'block';
+            }
+        }
+
+        // LIGHTBOX MODAL
         function openModal(index) {
             const item = mediaData[index];
             const modal = document.getElementById('media-modal');
@@ -1128,121 +1292,11 @@
             }
         }
 
-        // HANDLE ADMIN ALBUM UPLOAD
-        function handleUpload(e) {
-            e.preventDefault();
-            const method = document.querySelector('input[name="upload_method"]:checked').value;
-            const caption = document.getElementById('media-caption').value;
-
-            if (method === 'file') {
-                const fileInput = document.getElementById('media-file');
-                const file = fileInput.files[0];
-
-                if (!file) {
-                    alert('অনুগ্রহ করে একটি ফাইল নির্বাচন করুন!');
-                    return;
-                }
-
-                const reader = new FileReader();
-                reader.onload = function(evt) {
-                    const isVideo = file.type.startsWith('video');
-                    const newItem = {
-                        type: isVideo ? 'video' : 'image',
-                        src: evt.target.result,
-                        caption: caption
-                    };
-                    saveMediaItem(newItem);
-                };
-                reader.readAsDataURL(file);
-
-            } else {
-                const linkType = document.getElementById('media-link-type').value;
-                const linkUrl = document.getElementById('media-link').value;
-
-                if (!linkUrl) {
-                    alert('অনুগ্রহ করে লিংকের ঠিকানা (URL) প্রদান করুন!');
-                    return;
-                }
-
-                const newItem = {
-                    type: linkType,
-                    src: linkUrl,
-                    caption: caption
-                };
-                saveMediaItem(newItem);
-            }
-        }
-
-        function saveMediaItem(newItem) {
-            mediaData.unshift(newItem);
-            localStorage.setItem('wedding_media_v3', JSON.stringify(mediaData));
-            renderGallery();
-            alert('কন্টেন্ট সফলভাবে রাজকীয় অ্যালবামে যুক্ত হয়েছে!');
-            document.getElementById('upload-form').reset();
-            switchTab('public');
-        }
-
-        // COMMENTS SYSTEM
-        function addComment(e) {
-            e.preventDefault();
-            const name = document.getElementById('guest-name').value;
-            const relation = document.getElementById('guest-relation').value;
-            const message = document.getElementById('guest-message').value;
-            
-            const today = new Date();
-            const dateStr = today.toLocaleDateString('bn-BD', { day: 'numeric', month: 'long', year: 'numeric' });
-
-            const newComment = {
-                name: name,
-                relation: relation ? `(${relation})` : '',
-                message: message,
-                date: dateStr
-            };
-
-            commentsData.unshift(newComment);
-            localStorage.setItem('wedding_comments_v3', JSON.stringify(commentsData));
-            renderComments();
-
-            document.getElementById('comment-form').reset();
-            alert('আপনার শুভকামনা ও আশীর্বাদ বার্তাটি নিবন্ধিত হয়েছে!');
-        }
-
-        function renderComments() {
-            const container = document.getElementById('comments-container');
-            container.innerHTML = '';
-
-            if (commentsData.length === 0) {
-                container.innerHTML = '<p style="color:var(--text-muted); text-align:center;">প্রথম আশীর্বাদ বার্তাটি আপনিই প্রদান করুন!</p>';
-                return;
-            }
-
-            commentsData.forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'comment-card';
-                div.innerHTML = `
-                    <div class="comment-header">
-                        <div class="comment-author">
-                            <span>🌹</span> ${item.name} <span style="font-size:0.85rem; font-weight:normal; color:var(--text-muted);">${item.relation}</span>
-                        </div>
-                        <div class="comment-date">📅 ${item.date}</div>
-                    </div>
-                    <div class="comment-body">${item.message}</div>
-                `;
-                container.appendChild(div);
-            });
-        }
-
-        // ESCAPE KEY TO CLOSE MODAL
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeModal();
             }
         });
-
-        // INITIAL RENDER
-        renderProfiles();
-        renderGallery();
-        renderComments();
     </script>
 </body>
 </html>
