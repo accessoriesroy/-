@@ -619,6 +619,28 @@
             .profile-card.left-img, .profile-card.right-img { flex-direction: column; }
             .profile-img-container { flex: 0 0 220px; width: 100%; }
         }
+    
+    
+    .glowing-link {
+  color: #ffd700; /* সোনালী রঙ */
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  animation: glowEffect 2s infinite alternate;
+}
+
+@keyframes glowEffect {
+  0% {
+    color: #ffd700;
+    text-shadow: 0 0 2px #ffd700;
+  }
+  100% {
+    color: #ffffff;
+    text-shadow: 0 0 12px #ffffff, 0 0 20px #ffd700;
+  }
+}
+    
+    
     </style>
 </head>
 <body>
@@ -870,16 +892,12 @@
         <div style="text-align: center; color: #ffffff; background-color: #3b0a11; padding: 20px; font-family: Arial, sans-serif;">
             <p>© 2026 ছোট ভাইয়ের বিবাহের শুভ উপহার অ্যালবাম |</p>
             <p>ভালোবাসা ও হৃদতায় নির্মিত</p>
-            <p>
-                © 2026 
-                <a href="https://www.accessoriesroy.in" target="_blank" style="color: #ffffff; text-decoration: underline;">
-                    www.accessoriesroy.in
-                 <a href="https://www.arradio.shop" target="_blank" style="color: #ffffff; text-decoration: underline;">
-                    www.arradio.shop
-                
-                
-                </a>
-            </p>
+          <p class="footer-links">
+  © 2026 
+  <a href="https://www.accessoriesroy.in" target="_blank" class="glowing-link">www.accessoriesroy.in</a> 
+  | 
+  <a href="https://www.arradio.shop" target="_blank" class="glowing-link">www.arradio.shop</a>
+</p>
         </div>
     </footer>
 
